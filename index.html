@@ -5,7 +5,12 @@
 <meta charset="UTF-8">
 <link rel="shortcut icon" type="image/x-icon" href="img/icon.png"/>
 <title>刘馥欣作品集</title>
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<nav class="codrops-demos">
+    <a class="current-demo" href="index.html">首页</a>
+    <a href="gallery.html">摄影</a>
+    <a href="中文简历.pdf">简历</a>
+</nav>
 </head>
 <body translate="no">
 <div class='container'>
@@ -16,11 +21,11 @@
 我目前就读于同济大学设计创意学院，研究生二年级，对UI/UX设计、游戏设计、AR/VR/MR设计有很大兴趣。
 </p>
 <p class='small'>
-如果对我的项目及教育经历感兴趣，可以查看我的<a href="中文简历.pdf">个人简历</a>以了解更多。
+如果对我的项目及教育经历感兴趣，可以查看我的<a href="中文简历.pdf">个人简历</a>以了解更多。此外，<a href="gallery.html">摄影图集</a>中收录了本人2015至今的部分摄影作品。
 </p>
 </header>
 <main>
- <div class='items'>
+<div class='items'>
 <div class='item'>
 <svg preserveAspectRatio='xMidYMid slice' viewBox='0 0 300 200'>
 <defs>
@@ -65,13 +70,13 @@
 </clipPath>
 </defs>
 <text class='svg-text' dy='.3em' x='50%' y='50%'>
-Bunny Park
+帮你停车
 </text>
 <g clip-path='url(#clip-2)'>
-<image height='100%' preserveAspectRatio='xMinYMin slice' width='100%' xlink:href='img/BunnyPark.jpg'></image>
-<text class='svg-masked-text' dy='.3em' x='50%' y='50%'>
-Bunny Park
-</text>
+<a href="BunnyPark.html"><image height='100%' preserveAspectRatio='xMinYMin slice' width='100%' xlink:href='img/BunnyPark/BunnyPark.png'></image></a>
+<a href="BunnyPark.html"><text class='svg-masked-text' dy='.3em' x='50%' y='50%'>
+帮你停车
+</text></a>
 </g>
 </svg>
 </div>
@@ -245,9 +250,6 @@ V III
 <button class='light'></button>
 </div>
 <script id="rendered-js">
-      /*
- * Noel Delgado | @pixelia_me
- */
 
 var items = []
   , point = document.querySelector('svg').createSVGPoint();

@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="Main.css">
-	<title>我很好-2D游戏设计</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/icon.png"/>
+	<title>我很好 - 2D游戏设计</title>
 </head>
 <body>
+
+
+<div class='options'>
+<button class='dark'></button>
+<button class='light'></button>
+</div>
+<script id="rendered-js">
+function changeColor(e) {
+  document.body.className = e.currentTarget.className;
+}
+[].slice.call(document.querySelectorAll('button'), 0).forEach(function (button) {
+  button.addEventListener('click', changeColor);
+});
+    </script>
