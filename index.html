@@ -3,17 +3,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/x-icon" href="img/icon.png"/>
 <title>刘馥欣作品集</title>
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<nav class="codrops-demos">
-    <a class="current-demo" href="index.html">首页</a>
-    <a href="gallery.html">摄影</a>
-    <a href="中文简历.pdf">简历</a>
-</nav>
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
 </head>
 <body translate="no">
 <div class='container'>
+  <section class="section section--menu" id="Prospero">
+      <nav class="menu menu--prospero">
+        <ul class="menu__list">
+          <li class="menu__item menu__item--current"><a class="menu__link" onclick="javascript:window.location.href='index.html'">首页</a></li>
+          <li class="menu__item"><a class="menu__link" onclick="javascript:window.location.href='gallery.html'">相册</a></li>
+          <li class="menu__item"><a class="menu__link" onclick="javascript:window.location.href='about.html'">关于我</a></li>
+          <li class="menu__item"><a class="menu__link">English</a></li>
+        </ul>
+      </nav>
+    </section>
 <header>
 <h1>你好，我叫刘馥欣</h1>
 <p>
@@ -299,5 +308,34 @@ Item.prototype = {
   button.addEventListener('click', changeColor);
 });
     </script>
+
+<!--nav-->
+<script src="js/classienav.js"></script>
+  <script src="js/clipboard.min.js"></script>
+  <script>
+    (function() {
+      [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+        var menuItems = menu.querySelectorAll('.menu__link'),
+          setCurrent = function(ev) {
+            ev.preventDefault();
+
+            var item = ev.target.parentNode; // li
+
+            // return if already current
+            if( classie.has(item, 'menu__item--current') ) {
+              return false;
+            }
+            // remove current
+            classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+            // set current
+            classie.add(item, 'menu__item--current');
+          };
+
+        [].slice.call(menuItems).forEach(function(el) {
+          el.addEventListener('click', setCurrent);
+        });
+      });
+    })(window);
+  </script>
 </body>
 </html>

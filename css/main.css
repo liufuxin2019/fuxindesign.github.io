@@ -16,11 +16,12 @@ body {
 }
 
 a {
-  color: #1abc89;
+  color: #f48b95;
+  text-decoration: none;
+  outline: none;
 }
 
 a:hover {
-  opacity: .8;
 }
 
 p {
@@ -36,12 +37,12 @@ p {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem;
 }
 .gallerycontainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem;
 }
 
 header {
@@ -168,19 +169,4 @@ button.light {
 }
 .light .svg-text {
   fill: rgba(0, 0, 0, 0.1);
-}
-
-/* Demo links */
-
-.codrops-demos {
-  margin: 2em 0 0;
-}
-
-.codrops-demos a {
-  display: inline-block;
-  margin: 0 0.5em;
-}
-
-.codrops-demos a.current-demo {
-  color: #fff;
 }
