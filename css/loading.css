@@ -7,14 +7,13 @@
 .spinner > div {
   width: 15px;
   height: 15px;
-  background-color: #6bd68a;
- 
+  background-color: #f48b95;
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
   animation: bouncedelay 1.4s infinite ease-in-out;
   /* Prevent first frame from flickering when animation starts */
-  -webkit-animation-fill-mode: both;
+  -webkit-animation-fill-mode: both1
   animation-fill-mode: both;
 }
  
