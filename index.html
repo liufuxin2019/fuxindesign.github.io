@@ -11,30 +11,30 @@
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="css/component.css" />
 </head>
-<body translate="no">
+<body translate="no" style="background-image: url('img/Background.jpg');">
 <div class='container'>
   <section class="section section--menu" id="Prospero">
       <nav class="menu menu--prospero">
         <ul class="menu__list">
-          <li class="menu__item menu__item--current"><a class="menu__link" onclick="javascript:setTimeout(function(){location.href='index.html';},150);">首页</a></li>
-          <li class="menu__item"><a class="menu__link" onclick="javascript:setTimeout(function(){location.href='gallery.html';},150);">相册</a></li>
+          <li class="menu__item menu__item--current"><a class="menu__link" onclick="javascript:setTimeout(function(){location.href='index.html';},150);">作品集</a></li>
+          <li class="menu__item"><a class="menu__link" onclick="javascript:setTimeout(function(){location.href='gallery.html';},150);">摄影</a></li>
           <li class="menu__item"><a class="menu__link" onclick="javascript:setTimeout(function(){location.href='about.html';},150);">关于我</a></li>
           <li class="menu__item"><a class="menu__link">English</a></li>
         </ul>
       </nav>
     </section>
 <header>
-<h1>你好，我叫刘馥欣</h1>
-<p>
+<h1 style="color: #fff;">你好，我叫刘馥欣</h1>
+<p style="color: #fff;">
 你好，我是一名学习交互设计的在读研究生，曾参与多项用户体验设计项目，擅长用户画像、故事板制作、原型制作等用户体验设计工具。目前就读于同济大学设计创意学院，研究生二年级，对UI/UX设计、游戏设计、AR/VR/MR设计有兴趣及项目经验。
 </p>
-<p class='small'>
+<p class='small' style="color: #fff;">
 如果想了解更多我参与的项目及教育经历，可以查看我的<a href="中文简历.pdf">个人简历</a>。此外，本人还对摄影有浓厚兴趣，<a href="gallery.html">相册</a>中收录了本人2015至今的部分摄影作品。
 </p>
 </header>
 <main>
 <div class='items'>
-<div class='item'>
+<div class='item' style="background-color: #D0B8B1;">
 <svg preserveAspectRatio='xMidYMid slice' viewBox='0 0 300 200'>
 <defs>
 <clipPath id='clip-0'>
@@ -42,17 +42,18 @@
 </clipPath>
 </defs>
 <text class='svg-text' dy='.3em' x='50%' y='50%'>
-我很好
+帮你停车
 </text>
 <g clip-path='url(#clip-0)'>
-<a href="Iamfine.html"><image height='100%' preserveAspectRatio='xMinYMin slice' width='100%' xlink:href='img/Iamfine.png'></image></a>
+<a href="BunnyPark.html"><image height='100%' preserveAspectRatio='xMinYMin slice' width='100%' xlink:href='img/BunnyPark/BunnyPark.png'></image></a>
 <text class='svg-masked-text' dy='.3em' x='50%' y='50%'>
-我很好
+帮你停车
+<div class="subtitle"><br/><br/><br/>用户体验研究及设计</div>
 </text>
 </g>
 </svg>
 </div>
-<div class='item'>
+<div class='item' style="background-color: #B1CAD0;">
 <svg preserveAspectRatio='xMidYMid slice' viewBox='0 0 300 200'>
 <defs>
 <clipPath id='clip-1'>
@@ -66,11 +67,12 @@
 <image height='100%' preserveAspectRatio='xMinYMin slice' width='100%' xlink:href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-worms.png'></image>
 <text class='svg-masked-text' dy='.3em' x='50%' y='50%'>
 面向2025的纯电动汽车HMI设计
+<div class="subtitle"><br/><br/><br/>用户体验研究及设计、校企合作项目</div>
 </text>
 </g>
 </svg>
 </div>
-<div class='item'>
+<div class='item' style="background-color: #C1D0B1">
 <svg preserveAspectRatio='xMidYMid slice' viewBox='0 0 300 200'>
 <defs>
 <clipPath id='clip-2'>
@@ -78,12 +80,13 @@
 </clipPath>
 </defs>
 <text class='svg-text' dy='.3em' x='50%' y='50%'>
-帮你停车
+谷之源
 </text>
 <g clip-path='url(#clip-2)'>
 <a href="BunnyPark.html"><image height='100%' preserveAspectRatio='xMinYMin slice' width='100%' xlink:href='img/BunnyPark/BunnyPark.png'></image></a>
 <a href="BunnyPark.html"><text class='svg-masked-text' dy='.3em' x='50%' y='50%'>
-帮你停车
+谷之源
+<div class="subtitle"><br/><br/><br/>机械创新设计</div>
 </text></a>
 </g>
 </svg>
@@ -253,10 +256,6 @@ V III
 </div>
 </main>
 </div>
-<div class='options'>
-<button class='dark'></button>
-<button class='light'></button>
-</div>
 <script id="rendered-js">
 
 var items = []
@@ -266,10 +265,6 @@ function getCoordinates(e, svg) {
   point.x = e.clientX;
   point.y = e.clientY;
   return point.matrixTransform(svg.getScreenCTM().inverse());
-}
-
-function changeColor(e) {
-  document.body.className = e.currentTarget.className;
 }
 
 function Item(config) {
@@ -301,10 +296,6 @@ Item.prototype = {
     svg: item.querySelector('svg'),
     clip: document.querySelector('#clip-'+index+' circle'),
   }));
-});
-
-[].slice.call(document.querySelectorAll('button'), 0).forEach(function (button) {
-  button.addEventListener('click', changeColor);
 });
     </script>
 
