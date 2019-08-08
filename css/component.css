@@ -56,32 +56,6 @@ body, html { font-size: 100%;   padding: 0; margin: 0;}
     padding: 2em 0 8em;
 }
 
-.section__title {
-    font-size: 0.65em;
-    font-weight: 700;
-    -webkit-flex: none;
-    flex: none;
-    margin: 3em 0 15em;
-    text-indent: 3px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #d1d1d1;
-}
-
-.section--intro {
-    font-size: 2em;
-    position: relative;
-    min-height: 100vh;
-    text-align: center;
-    color: #fff;
-}
-
-.section--intro p {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1em;
-}
-
 /* Common styles for all menus */
 .menu {
     line-height: 1;
@@ -145,7 +119,7 @@ body, html { font-size: 100%;   padding: 0; margin: 0;}
 }
 
 .menu--prospero .menu__item--current .menu__link {
-    color: #d94f5c;
+    color: #F48B95;
 }
 
 .menu--prospero .menu__link::before {
@@ -155,7 +129,7 @@ body, html { font-size: 100%;   padding: 0; margin: 0;}
     left: 0;
     width: 100%;
     height: 4px;
-    background: #d94f5c;
+    background: #F48B95;
     -webkit-transform: scale3d(0, 1, 1);
     transform: scale3d(0, 1, 1);
     -webkit-transition: -webkit-transform 0.1s;
