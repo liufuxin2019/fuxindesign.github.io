@@ -117,6 +117,7 @@ text {
 
 .svg-text {
   fill: #545a64;
+  text-shadow:5px 2px 6px #000;
 }
 
 .svg-masked-text {
